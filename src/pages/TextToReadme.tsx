@@ -551,11 +551,10 @@ export default function TextToReadme() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="w-full max-w-3xl mx-auto p-4 rounded-xl border border-border bg-card/60 backdrop-blur-md flex flex-wrap items-center justify-between gap-4 text-xs shadow-sm"
+          className="w-fit max-w-full mx-auto px-4 py-3 rounded-xl border border-border bg-card/60 backdrop-blur-md shadow-sm overflow-x-auto"
         >
-          {/* Controls */}
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-            <div className="flex items-center space-x-2">
+          <div className="flex items-center gap-4 sm:gap-5 text-xs whitespace-nowrap">
+            <div className="flex items-center space-x-2 shrink-0">
               <Switch 
                 id="center-header" 
                 checked={centerHeader} 
@@ -567,7 +566,9 @@ export default function TextToReadme() {
               </Label>
             </div>
 
-            <div className="flex items-center space-x-2">
+            <div className="h-3.5 w-px bg-border/60 shrink-0" />
+
+            <div className="flex items-center space-x-2 shrink-0">
               <Switch 
                 id="include-badges" 
                 checked={includeBadges} 
@@ -579,7 +580,9 @@ export default function TextToReadme() {
               </Label>
             </div>
 
-            <div className="flex items-center space-x-2">
+            <div className="h-3.5 w-px bg-border/60 shrink-0" />
+
+            <div className="flex items-center space-x-2 shrink-0">
               <Switch 
                 id="include-toc" 
                 checked={includeTOC} 
@@ -590,7 +593,9 @@ export default function TextToReadme() {
               </Label>
             </div>
 
-            <div className="flex items-center space-x-2">
+            <div className="h-3.5 w-px bg-border/60 shrink-0" />
+
+            <div className="flex items-center space-x-2 shrink-0">
               <Switch 
                 id="include-emojis" 
                 checked={includeEmojis} 
@@ -600,22 +605,23 @@ export default function TextToReadme() {
                 <span>Section Emojis</span>
               </Label>
             </div>
-          </div>
 
-          {/* Right Controls: License Selector */}
-          <div className="flex items-center gap-2">
-            <span className="text-muted-foreground">License:</span>
-            <select
-              value={licenseType}
-              onChange={(e) => setLicenseType(e.target.value)}
-              className="bg-background border border-border rounded-md px-2.5 py-1 text-xs text-foreground focus:outline-none focus:ring-1 focus:ring-primary"
-            >
-              <option value="MIT">MIT License</option>
-              <option value="Apache-2.0">Apache 2.0</option>
-              <option value="GPL-3.0">GPL v3</option>
-              <option value="BSD-3-Clause">BSD 3-Clause</option>
-              <option value="None">None</option>
-            </select>
+            <div className="h-3.5 w-px bg-border/60 shrink-0" />
+
+            <div className="flex items-center gap-2 shrink-0">
+              <span className="text-muted-foreground">License:</span>
+              <select
+                value={licenseType}
+                onChange={(e) => setLicenseType(e.target.value)}
+                className="bg-background border border-border rounded-md px-2 py-0.5 text-xs text-foreground focus:outline-none focus:ring-1 focus:ring-primary"
+              >
+                <option value="MIT">MIT</option>
+                <option value="Apache-2.0">Apache 2.0</option>
+                <option value="GPL-3.0">GPL v3</option>
+                <option value="BSD-3-Clause">BSD 3-Clause</option>
+                <option value="None">None</option>
+              </select>
+            </div>
           </div>
         </motion.div>
 
