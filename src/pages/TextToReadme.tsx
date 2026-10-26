@@ -551,9 +551,9 @@ export default function TextToReadme() {
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.15 }}
-          className="p-4 rounded-xl border border-border bg-card/60 backdrop-blur-md flex flex-wrap items-center justify-between gap-4 text-xs"
+          className="w-full max-w-3xl mx-auto p-4 rounded-xl border border-border bg-card/60 backdrop-blur-md flex flex-wrap items-center justify-between gap-4 text-xs shadow-sm"
         >
-          {/* Left Controls */}
+          {/* Controls */}
           <div className="flex flex-wrap items-center gap-4 sm:gap-6">
             <div className="flex items-center space-x-2">
               <Switch 
