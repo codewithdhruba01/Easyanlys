@@ -7,6 +7,7 @@ import FollowerCounter from './pages/FollowerCounter';
 import FollowingAnalysis from './pages/FollowingAnalysis';
 import ProfileCompare from './pages/ProfileCompare';
 import ReadmeDesigner from './pages/ReadmeDesigner';
+import TextToReadme from './pages/TextToReadme';
 
 import { ThemeProvider } from './components/theme-provider';
 import { Navbar } from './components/navbar';
@@ -28,6 +29,7 @@ function App() {
               <Route path="/following-analysis" element={<FollowingAnalysis />} />
               <Route path="/profile-compare" element={<ProfileCompare />} />
               <Route path="/readme-designer" element={<ReadmeDesigner />} />
+              <Route path="/text-to-readme" element={<TextToReadme />} />
             </Routes>
           </main>
           <Footer />

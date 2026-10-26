@@ -26,6 +26,7 @@ export function Footer() {
             <nav className="flex flex-wrap justify-center items-center gap-4 md:gap-6">
               <Link to="/follower-counter" className="text-sm text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">Follower</Link>
               <Link to="/readme-designer" className="text-sm text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">.md Designer</Link>
+              <Link to="/text-to-readme" className="text-sm text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">Text to README</Link>
               <Link to="/following-analysis" className="text-sm text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">Analysis</Link>
               <Link to="/profile-compare" className="text-sm text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap">Compare</Link>
             </nav>
