@@ -651,10 +651,6 @@ export default function TextToReadme() {
                       : 'border-border bg-background/50 hover:bg-muted text-muted-foreground'
                   }`}
                 >
-                  <span 
-                    className="w-1.5 h-1.5 rounded-full" 
-                    style={{ backgroundColor: tech.color || '#666' }} 
-                  />
                   {tech.name}
                   {active && <Check className="w-3 h-3 text-primary ml-0.5" />}
                 </button>
